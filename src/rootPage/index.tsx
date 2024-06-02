@@ -140,13 +140,13 @@ export const Root = () => {
                                     min="1"
                                 />
                             </div>
-                            <button onClick={generateData} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">Generate Data</button>
+                            <button onClick={generateData} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">Generate</button>
                         </>
                     )}
 
                     {dataGenerated && !challengeStarted && (
                         <>
-                            <button onClick={generateData} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">Regenerate Data</button>
+                            <button onClick={generateData} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">Regenerate</button>
                             <div className="flex flex-col">
                                 {randomData.length > 0 && randomData.map((item, index) => (
                                     <div key={index} className="border rounded p-2 mb-2">
