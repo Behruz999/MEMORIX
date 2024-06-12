@@ -95,9 +95,9 @@ export const Root = () => {
 
     return (
         <>
-            <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+            <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
                 <h1 className="text-3xl font-bold mb-8">MemoriX</h1>
-                <div className="bg-white rounded shadow p-8 w-96">
+                <div className="bg-white rounded shadow p-8 w-full max-w-md">
                     {!dataGenerated && !challengeStarted && !showResults && (
                         <>
                             <div className="flex items-center mb-4">
@@ -140,13 +140,13 @@ export const Root = () => {
                                     min="1"
                                 />
                             </div>
-                            <button onClick={generateData} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">Generate</button>
+                            <button onClick={generateData} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 w-full">Generate</button>
                         </>
                     )}
 
                     {dataGenerated && !challengeStarted && (
                         <>
-                            <button onClick={generateData} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">Regenerate</button>
+                            <button onClick={generateData} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 w-full">Regenerate</button>
                             <div className="flex flex-col">
                                 {randomData.length > 0 && randomData.map((item, index) => (
                                     <div key={index} className="border rounded p-2 mb-2">
@@ -154,7 +154,7 @@ export const Root = () => {
                                     </div>
                                 ))}
                             </div>
-                            <button onClick={startChallenge} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4">Start Challenge</button>
+                            <button onClick={startChallenge} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4 w-full">Start Challenge</button>
                         </>
                     )}
 
@@ -172,7 +172,7 @@ export const Root = () => {
                                     />
                                 ))}
                             </div>
-                            <button onClick={verifyChallenge} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4">Verify</button>
+                            <button onClick={verifyChallenge} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4 w-full">Verify</button>
                         </>
                     )}
 
@@ -196,7 +196,7 @@ export const Root = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <button onClick={resetChallenge} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Restart</button>
+                            <button onClick={resetChallenge} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 w-full">Restart</button>
                         </>
                     )}
                 </div>
